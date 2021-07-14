@@ -1,0 +1,147 @@
+/* ****************
+ fonts  
+ **************** */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+/* ****************
+ base style 
+ **************** */
+ body{
+    margin: 0%;
+    font-family: 'Poppins', sans-serif;
+    width: 1450px;
+}
+.container { 
+    margin: 70px;
+ }
+/* ****************
+Header Css
+**************** */
+header{
+    height: 677px;
+    background-color:#2D25A0;
+}
+.banner{
+    display: flex;
+   justify-content: space-around;
+   align-items: center;
+    
+}
+.title-name{
+    width: 485px;
+    height: 250px
+}
+.title-name h1{
+        color: #ffffff;
+        font-size: 64px;
+        font-weight: 700;
+        margin-bottom: 27px;
+        line-height: 1.3;
+
+}
+.live-button {
+    width: 168px;
+    height: 44px;
+    background-color: #E02C6D;
+   
+}
+.live-button a{
+    text-decoration: none;
+    color: white;  
+    font-size: 15px; 
+}   
+.title-banner img{
+    width: 550px;
+    height: 440px;
+}
+.live-button:hover{
+    width:200px ;
+    height: 80px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+    transform: translateX(3px);
+    transition: transform 1s ease-in 0.2s;
+}
+/* ****************
+ Players Card 
+ **************** */
+.players{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 27px;
+  
+ }
+.player{
+    height: 500px; 
+    width: 330px;
+    border: 1px solid white;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);;   
+    padding: 25px;
+}
+.player-img img{
+    width: 330px;
+   
+}
+.player-about h2{
+    background-color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.player-about p{
+    color: #6c6c6c;
+}
+/* ****************
+Contact section css 
+**************** */
+.Contacts{
+    background-color: rgba(231, 227, 227, 0.295);
+    margin: 70px;
+}
+.Contact{
+    margin-left: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-info{
+    width: 330px;
+   
+}
+.contact-info p{
+   color: #6c6c6c; 
+}
+
+/* ****************
+ footer css
+ **************** */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-banner img{   
+    width: 420px;
+    height: 115px;
+    margin-bottom: 20px;
+}
+
+.social-media 
+a{
+    text-decoration: none;
+    color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #E7E7E8;
+    border-radius: 25px;
+    font-size: 2em;
+    margin: 5px;    
+}
+.copyright{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
