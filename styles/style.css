@@ -3,30 +3,38 @@
  **************** */
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 /* ****************
- base style 
+Base css
  **************** */
  body{
-     
+    width: 1450px;
     margin: 0%;
     font-family: 'Poppins', sans-serif;
-    width: 1450px;
+    
    
  }
+ .container{
+        margin-right: 150px;
+        margin-left: 150px;
+        
+     }
+
 /* ****************
 Header Css
 **************** */
-
 .banner{
-    height: 677px;
-    display: flex;
-   justify-content: space-around;
-   align-items: center;
-   background-color:#2D25A0;
+     height: 677px;
     
+   justify-content: space-around;
+    align-items: center; 
+    background-color:#2D25A0; 
+    padding-left: 70px;
+   margin-bottom: 70px; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 .title-name{
     width: 485px;
-    height: 250px
+    height: 320px;
 }
 .title-name h1{
         color: #ffffff;
@@ -54,11 +62,9 @@ Header Css
     height: 440px;
 }
 .live-button:hover{
-    width: 200px;
-    height:80px;
-    border-radius: 120px;
+    border-radius: 25px;
     background-color: #ffffff;
-    color: blue;
+    color: rgb(160, 214, 88);
 }
 .live-button:hover a{
     color: blue;
@@ -84,93 +90,80 @@ Header Css
 /* ****************
  Players Card 
  **************** */
-
-.container { 
-    margin: 70px;
- }
-
 .players{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 27px;
-  
+     
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 30px;
+      grid-row-gap: 27px;    
+      justify-content: center;
  }
-.player{
+ .player{
+     width: 330px;
     height: 500px; 
-    width: 330px;
     border: 1px solid white;
     box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);;   
     padding: 25px;
 }
-.player-img img{
-    width: 330px;
-   
-}
-.player-about h2{
-    background-color: #fff;
-    font-size: 35px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
 .player-about p{
     color: #6c6c6c;
+
 }
+.player-img img{
+    width: 100%;
+    
+}
+/* ****************
+video css 
+**************** */
+.videos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.video{
+    width: 320px;
+    height: 400px;
+    padding: 10px;
+    margin-bottom: 70px;
+    background-color: #000000e3;
+    border-radius: 5px;
+}
+.video h4{
+    color: white;
+}
+.video p{
+    color: white;
+    font-size: 15px;
+    padding-top: 60px; ;
+
+}
+
+
 /* ****************
 Contact section css 
 **************** */
-.Contacts{
-    background-color: rgba(231, 227, 227, 0.295);
-    margin: 70px;
-    
-}
+
 .Contact{
-   
+    width: 100%;
+    background-color: rgba(231, 227, 227, 0.295);
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 70px;
 }
 
 .contact-info{
-    width: 330px;
+  
+     width: 330px;
    
 }
 .contact-info p{
    color: #6c6c6c; 
-}
-/* ****************
-Tournament Stat CSS
-**************** */
-.Stat-record{
-   margin-left: 50px;
-}
-.stat-info{
-    width: 1300px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 10px;
-    margin-left: 15px;
-
-}
-.stats { 
-    background-color: rgba(181, 192, 228, 0.342); 
-    border-radius: 5px;  
-    padding-left: 15px;
-    margin-bottom: 70px;
-}
-.stats h6{
-    font-size: 25px;
-    font-weight: 500;
-}
-.stats .number{
-    font-size: 50px;
-}
-.stats p{
-font-size: 20px;
-}
+} 
 /* ****************
  footer css
  **************** */
-footer{
+ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -209,3 +202,84 @@ a{
     font-weight: 500;
     margin-bottom: 60px;
 }
+
+/* ****************
+ Media Query
+ **************** */
+
+/* ****************
+ Mobile Device
+ **************** */
+
+ @media only screen and (max-width:688px) {
+.container{
+    width: 100%;
+    margin-left: 30px;
+    margin-right: 0;
+}
+body{
+    width: 360px;
+}
+.banner{
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    width: 360px;
+}  
+    .title-name{
+        width: 278px;
+    height: 138px;
+}
+.title-name h1{
+    width: 278px;
+    height: 138px;
+   line-height: 50px;
+    font-size: 36px;
+    margin-top: 20px;
+    margin-left: 20px; ;
+}
+.live-button{
+    width: 168px; 
+    height: 44px;
+    margin-top:30px;
+    margin-left: 50px;
+} 
+.title-banner{
+    width: 330px;
+
+}
+.title-banner img{
+    
+    width: 329px;
+    height: 259px;
+}
+    .players, .videos{
+        
+         grid-template-columns: repeat(1, 1fr);
+         grid-row-gap: 24px;
+       
+         width: 360px;
+         
+        } 
+.Contact{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: start;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+   align-items: flex-start;
+} 
+.footer-banner{
+    width: auto;
+}   
+.footer-banner img {
+    width: 150px;
+    height: 60px;  
+    margin-left: 30px;
+}
+.copyright{
+    margin-left: 30px;
+}
+ }
