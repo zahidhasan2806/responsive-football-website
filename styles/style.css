@@ -5,14 +5,14 @@
 /* ****************
 Base css
  **************** */
- body{
+body{
     width: 1450px;
     margin: 0%;
     font-family: 'Poppins', sans-serif;
     
    
- }
- .container{
+}
+.container{
         margin-right: 150px;
         margin-left: 150px;
         
@@ -48,9 +48,15 @@ Header Css
     width: 168px;
     height: 44px;
     background-color: #E02C6D;
-    transition: transform ease-in .5s; 
-     
+    transition: transform 2s ease;   
 }
+.live-button:hover{
+    transform: scale(.8);
+    border-radius: 25px;
+    background-color: #ffffff;}
+    .live-button:hover a{
+        color: black;
+    }
 .live-button a{
     text-decoration: none;
     color: white;  
@@ -60,29 +66,12 @@ Header Css
 .title-banner img{
     width: 550px;
     height: 440px;
-}
-.live-button:hover{
-    border-radius: 25px;
-    background-color: #ffffff;
-    color: rgb(160, 214, 88);
-}
-.live-button:hover a{
-    color: blue;
-    font-size: 25px;
-    font-weight: 700;
-}
+    transition: transform 2s ease;
 
-.live-button::after {
-        content: "";
-        display: block;
-        width: 175px;
-        height: 1px;
-        background: #FFF;
-        position: absolute;
-        transform: scaleX(0);
-        transition: .5s;
-     }
-     
+}
+.title-banner img:hover{
+    transform: scale(1.1);
+}  
 .live-button:hover::after {
         transform: scaleX(1);
      
@@ -252,7 +241,7 @@ body{
     width: 329px;
     height: 259px;
 }
-    .players, .videos{
+.players, .videos{
         
          grid-template-columns: repeat(1, 1fr);
          grid-row-gap: 24px;
@@ -283,3 +272,6 @@ footer{
     margin-left: 30px;
 }
  }
+ /* ***************
+ The End 
+ *************** */
